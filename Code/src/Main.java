@@ -21,7 +21,7 @@ public class Main {
 			try {
 			Thread.sleep(2000);
 			sensorTriggerPin.high(); // Make trigger pin HIGH
-			Thread.sleep((long) 0.01);// Delay for 10 microseconds
+			java.util.concurrent.TimeUnit.MICROSECONDS.sleep(10); // Delay for 10 microseconds
 			sensorTriggerPin.low(); //Make trigger pin LOW
 		
 			while(sensorEchoPin.isLow()){ //Wait until the ECHO pin gets HIGH
